@@ -16,7 +16,7 @@ export default function LoginPage({stylediff}) {
             return;
         }
         
-
+   
         const storedEmail = localStorage.getItem('email');
         const storedPassword = localStorage.getItem('password');
         

@@ -74,6 +74,314 @@
   gap: 20px;
   align-items: center;
 }
+/* Base Styles */
+.about-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--on-background);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+/* Hero Section */
+.about-hero {
+  height: 60vh;
+  min-height: 400px;
+  background: url('/images/about/hero-bg.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* History Section */
+.history-section {
+  padding: 5rem 0;
+  background-color: var(--surface);
+}
+
+.history-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.history-text {
+  flex: 1;
+}
+
+.history-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.history-image {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.history-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.history-image:hover img {
+  transform: scale(1.03);
+}
+
+/* Mission & Vision */
+.mission-vision {
+  padding: 5rem 0;
+  background-color: var(--background);
+}
+
+.mission-vision .container {
+  display: flex;
+  gap: 2rem;
+}
+
+.mission-card, .vision-card {
+  flex: 1;
+  padding: 2.5rem;
+  border-radius: 10px;
+  background-color: var(--surface);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.mission-card:hover, .vision-card:hover {
+  transform: translateY(-10px);
+}
+
+.mission-card {
+  border-top: 5px solid var(--primary-color);
+}
+
+.vision-card {
+  border-top: 5px solid var(--secondary-color);
+}
+
+.mission-vision .icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-vision h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+/* Team Section */
+.team-section {
+  padding: 5rem 0;
+  background-color: var(--surface);
+}
+
+/* Values Section */
+.values-section {
+  padding: 5rem 0;
+  background-color: var(--background);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-card {
+  padding: 2rem;
+  background-color: var(--surface);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.value-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Dark Mode Specific */
+.dark .history-image {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dark .mission-card,
+.dark .vision-card,
+.dark .value-card {
+  background-color: var(--surface);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .history-content {
+    flex-direction: column;
+  }
+  
+  .mission-vision .container {
+    flex-direction: column;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+.team-carousel {
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-track::-webkit-scrollbar-track {
+  background: var(--divider);
+  border-radius: 10px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 10px;
+}
+
+.team-card {
+  scroll-snap-align: start;
+  min-width: 280px;
+  background: var(--surface);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.03);
+}
+
+.card-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+
+.card-content .role {
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-content .bio {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .team-card {
+    min-width: 240px;
+  }
+}
 
 .navbar-login a {
   text-decoration: none;

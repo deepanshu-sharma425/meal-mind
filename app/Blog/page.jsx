@@ -18,8 +18,7 @@ const Ap = () => {
       console.error("Error fetching meals:", error);
     }
   };
-  // the number of things that were there in the people was a bugger there  
-
+ 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
       <h2>🍽️ Search Meals</h2>

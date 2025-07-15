@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Search, Star, ArrowRight, Zap, Target, Users, Brain, Sparkles } from 'lucide-react';
 
@@ -148,7 +148,7 @@ export default function Home() {
               className="inline-block"
             >
               <Link
-                href="/signup"
+                to="/signup"
                 className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white rounded-2xl font-bold text-xl hover:from-emerald-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl hover:shadow-emerald-500/25"
               >
                 Get Started Free
@@ -267,7 +267,7 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="/services"
+                  to="/services"
                   className="inline-flex items-center text-emerald-600 font-bold text-lg hover:text-emerald-700 transition-colors duration-300"
                 >
                   Learn More <ArrowRight className="ml-2 h-5 w-5" />
@@ -323,7 +323,7 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="/dashboard"
+                  to="/dashboard"
                   className="inline-flex items-center text-emerald-600 font-bold text-lg hover:text-emerald-700 transition-colors duration-300"
                 >
                   Try Dashboard <ArrowRight className="ml-2 h-5 w-5" />

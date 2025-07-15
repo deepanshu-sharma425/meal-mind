@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Search, Clock, Users, ChefHat, Heart, Star } from 'lucide-react';
 
 export default function Recipes() {
@@ -184,7 +184,7 @@ export default function Recipes() {
                       ))}
                       <span className="text-sm text-gray-500 ml-2">4.8</span>
                     </div>
-                    <Link href={`/recipe/${meal.idMeal}`}>
+                    <Link to={`/recipe/${meal.idMeal}`}>
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}

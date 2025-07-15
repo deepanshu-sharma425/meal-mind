@@ -1,12 +1,11 @@
 "use client"
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Lock, User, Eye, EyeOff, Calendar, Ruler, Weight, Users } from 'lucide-react';
 
 export default function Signup() {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -143,7 +142,7 @@ export default function Signup() {
       }
       
       // Navigate to dashboard
-      router.push('/dashboard');
+      navigate('/dashboard');
     }
   };
 
@@ -579,11 +578,11 @@ export default function Signup() {
                 />
                 <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
                   I agree to the{' '}
-                  <Link href="/terms" className="text-emerald-600 hover:text-emerald-500">
+                  <Link to="/terms" className="text-emerald-600 hover:text-emerald-500">
                     Terms & Conditions
                   </Link>{' '}
                   and{' '}
-                  <Link href="/privacy" className="text-emerald-600 hover:text-emerald-500">
+                  <Link to="/privacy" className="text-emerald-600 hover:text-emerald-500">
                     Privacy Policy
                   </Link>
                 </label>
@@ -601,7 +600,7 @@ export default function Signup() {
             </div>
 
             <Link
-              href="/login"
+              to="/login"
               className="w-full flex justify-center py-3 px-4 border border-emerald-600 rounded-lg text-emerald-600 font-semibold hover:bg-emerald-50 transition-colors duration-200"
             >
               Sign In

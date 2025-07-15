@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   Plus, Target, TrendingUp, Calendar,

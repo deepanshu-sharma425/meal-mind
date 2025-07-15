@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import {  useLocation, useNavigate } from 'react-router-dom';
-import Link from 'next/link';
+import {  useLocation, useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X, Utensils, User, LogOut } from 'lucide-react';
 

@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { User, Weight, Ruler, Calendar, Edit3, Save, X, Target, Activity, Heart, TrendingUp } from 'lucide-react';
 
@@ -155,16 +155,16 @@ export default function Profile() {
           
           {/* Navigation Links */}
           <div className="flex justify-center space-x-6 mt-6">
-            <Link href="/dashboard" className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors">
+            <Link to="/dashboard" className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors">
               Dashboard
             </Link>
-            <Link href="/meal-plans" className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors">
+            <Link to="/meal-plans" className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors">
               Meal Plans
             </Link>
-            <Link href="/workouts" className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors">
+            <Link to="/workouts" className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors">
               Workouts
             </Link>
-            <Link href="/progress" className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors">
+            <Link to="/progress" className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors">
               Progress
             </Link>
           </div>

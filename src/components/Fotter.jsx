@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import Link from "next/link";
+import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import {
   Facebook,
@@ -13,7 +13,7 @@ import {
   MapPin,
 } from "lucide-react";
 
-export default function Footer() {
+export default function Fotter() {
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
@@ -78,7 +78,7 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <Link
                   key={link.path}
-                  href={link.path}
+                  to={link.path}
                   className="block text-gray-300 hover:text-emerald-400 transition-colors duration-200"
                 >
                   {link.label}

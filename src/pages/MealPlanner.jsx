@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Plus, Clock, Users, ChefHat, Sparkles, ArrowRight, Target } from 'lucide-react';
 
@@ -242,7 +242,7 @@ export default function MealPlanner() {
                         </div>
                         <div className="flex items-center space-x-2">
                           {meal ? (
-                            <Link href="/recipe">
+                            <Link to="/recipe">
                               <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}

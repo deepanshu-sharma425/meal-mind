@@ -1,13 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
 export default function Login() {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     email: '',
@@ -56,7 +55,7 @@ export default function Login() {
         const userData = JSON.parse(storedUserData);
         if (userData.email === formData.email && userData.password === formData.password) {
           localStorage.setItem('isLoggedIn', 'true');
-          router.push('/dashboard');
+          navigate('/dashboard');
         } else {
           setErrors({ email: 'Invalid email or password' });
         }
@@ -198,7 +197,7 @@ export default function Login() {
 
             {/* Signup Link */}
             <Link
-              href="/signup"
+              to="/signup"
               className="w-full flex justify-center py-3 px-4 border border-emerald-600 rounded-lg text-emerald-600 font-semibold hover:bg-emerald-50 transition-colors duration-200"
             >
               Create Account

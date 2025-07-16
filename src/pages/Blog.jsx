@@ -1,4 +1,3 @@
-"use client"
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, User, Clock, ArrowRight, Heart, Share2 } from 'lucide-react';
@@ -102,7 +101,9 @@ export default function Blog() {
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
               Nutrition 
-              <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+              <br />
+              
+              <span className=" bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                 Insights
               </span>
             </h1>
@@ -171,14 +172,14 @@ export default function Blog() {
                     <Clock className="h-4 w-4 mr-2" />
                     <span>{featuredPost.readTime}</span>
                   </div>
-                  <motion.button
+                  {/* <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
                   >
                     Read Article
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </motion.button>
+                  </motion.button> */}
                 </div>
                 <div className="relative">
                   <img

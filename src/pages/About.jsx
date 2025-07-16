@@ -1,4 +1,4 @@
-"use client"
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Eye, Users, Award, Heart, Zap } from 'lucide-react';
@@ -70,7 +70,7 @@ export default function About() {
                 Nutrition Science
               </span>
             </h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We're on a mission to make personalized nutrition accessible to everyone through cutting-edge AI
               technology and evidence-based science.
             </p>

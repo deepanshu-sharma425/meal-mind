@@ -119,7 +119,7 @@ export default function Services() {
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
             </h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Comprehensive nutrition solutions powered by AI to help you achieve your health goals
             </p>
           </motion.div>

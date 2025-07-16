@@ -183,7 +183,7 @@ export default function Login() {
               Sign In
             </motion.button>
 
-            {/* Divider */}
+
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300" />
@@ -193,7 +193,7 @@ export default function Login() {
               </div>
             </div>
 
-            {/* Signup Link */}
+          
             <Link
               to="/signup"
               className="w-full flex justify-center py-3 px-4 border border-emerald-600 rounded-lg text-emerald-600 font-semibold hover:bg-emerald-50 transition-colors duration-200"

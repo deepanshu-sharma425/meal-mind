@@ -10,22 +10,29 @@ export default function Profile() {
   const [editData, setEditData] = useState(null);
 
   useEffect(() => {
-    // Load user data from memory storage (avoiding localStorage)
-    const mockUserData = {
-      name: "John Doe",
-      email: "john.doe@example.com",
-      age: 30,
-      gender: "male",
-      weight: 75,
-      height: 175,
-      activityLevel: "moderate",
-      goal: "maintain",
-      dietaryRestrictions: ["Vegetarian"],
-      createdAt: new Date().toISOString()
-    };
-    
-    setUserData(mockUserData);
-    setEditData(mockUserData);
+    // Try to load user data from localStorage
+    const storedUserData = localStorage.getItem('userData');
+    if (storedUserData) {
+      const parsedData = JSON.parse(storedUserData);
+      setUserData(parsedData);
+      setEditData(parsedData);
+    } else {
+      // fallback to mock data if nothing in localStorage
+      const mockUserData = {
+        name: "John Doe",
+        email: "john.doe@example.com",
+        age: 30,
+        gender: "male",
+        weight: 75,
+        height: 175,
+        activityLevel: "moderate",
+        goal: "maintain",
+        dietaryRestrictions: ["Vegetarian"],
+        createdAt: new Date().toISOString()
+      };
+      setUserData(mockUserData);
+      setEditData(mockUserData);
+    }
   }, []);
 
   const calculateBMI = () => {
@@ -79,7 +86,7 @@ export default function Profile() {
   const handleSave = () => {
     if (editData) {
       setUserData(editData);
-      // In a real app, you'd save to your backend here
+      localStorage.setItem('userData', JSON.stringify(editData)); // persist changes
       setIsEditing(false);
     }
   };

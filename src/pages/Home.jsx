@@ -128,17 +128,17 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="flex items-center mb-6"
             >
-              <Sparkles className="h-8 w-8 text-emerald-400 mr-3" />
-              <span className="text-emerald-400 font-semibold text-lg">AI-Powered Nutrition</span>
+              <Sparkles className="h-8 w-8 text-emerald-600 mr-3" />
+              <span className="text-emerald-600 font-semibold text-lg">AI-Powered Nutrition</span>
             </motion.div>
             
-            <h1 className="text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <h1 className="text-6xl text-teal-600 lg:text-7xl font-bold mb-8 leading-tight">
               Transform Your 
-              <span className="block bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="block bg-teal-600  bg-clip-text text-transparent">
                 Nutrition Journey
               </span>
             </h1>
-            <p className="text-xl mb-10 text-gray-200 leading-relaxed max-w-lg">
+            <p className="text-xl mb-10 text-gray-600 leading-relaxed max-w-lg">
               Track calories, discover healthy recipes, and get AI-powered meal plans 
               tailored to your goals. Start your path to better health today.
             </p>

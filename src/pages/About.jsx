@@ -32,12 +32,12 @@ export default function About() {
   ];
 
   const milestones = [
-    { year: '2020', event: 'Founded with mission to democratize nutrition science' },
-    { year: '2021', event: 'Launched AI-powered meal recommendation engine' },
-    { year: '2022', event: 'Reached 100,000 active users milestone' },
-    { year: '2023', event: 'Introduced advanced biometric integration' },
-    { year: '2024', event: 'Expanded to personalized supplement recommendations' },
-    { year: '2025', event: 'Leading innovation in precision nutrition technology' },
+    { year: 'March 2024', event: 'Founded with mission to democratize nutrition science' },
+    { year: 'August 2024', event: 'Launched AI-powered meal recommendation engine' },
+    
+    { year: 'December 2024', event: 'Introduced advanced biometric integration' },
+    { year: 'January 2025', event: 'Expanded to personalized supplement recommendations' },
+    { year: 'April 2025', event: 'Leading innovation in precision nutrition technology' },
   ];
 
   return (

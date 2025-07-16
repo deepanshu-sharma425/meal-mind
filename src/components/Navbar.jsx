@@ -58,8 +58,8 @@ const Navbar = () => {
             >
               <Utensils className="h-7 w-7 text-white" />
             </motion.div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
-              NutriTracker
+            <span className="text-2xl font-bold bg bg-teal-600 bg-clip-text text-transparent">
+              Nutri Flow
             </span>
           </Link>
 

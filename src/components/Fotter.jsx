@@ -43,7 +43,7 @@ export default function Fotter() {
               className="mb-6"
             >
               <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-4">
-                NutriTracker
+                Nutri Flow
               </h3>
               <p className="text-gray-300 mb-6 max-w-md">
                 Your personal nutrition companion, helping you achieve your
@@ -114,7 +114,7 @@ export default function Fotter() {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2025 NutriTracker. All rights reserved.
+              © 2025 Nutri Flow. All rights reserved.
             </p>
 
             {/* Social Links */}

@@ -16,7 +16,7 @@ export default function Recipes() {
 
   const fetchRecipes = async () => {
     try {
-      const searches = ['chicken', 'pasta', 'beef', 'vegetarian', 'fish'];
+      const searches = ['pizza', 'pasta', 'Dal', 'vegetarian', 'fish'];
       const promises = searches.map(term =>
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
           .then(res => res.json())
@@ -29,6 +29,30 @@ export default function Recipes() {
       setMeals(uniqueMeals);
     } catch (error) {
       console.error('Error fetching recipes:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // API search when user types
+  useEffect(() => {
+    if (!searchTerm.trim()) return; // don't call API on empty search
+
+    const timeoutId = setTimeout(() => {
+      searchRecipes(searchTerm);
+    }, 500); // debounce for 500ms
+
+    return () => clearTimeout(timeoutId);
+  }, [searchTerm]);
+
+  const searchRecipes = async (term) => {
+    setLoading(true);
+    try {
+      const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`);
+      const data = await res.json();
+      setMeals(data.meals || []);
+    } catch (error) {
+      console.error('Error searching recipes:', error);
     } finally {
       setLoading(false);
     }
@@ -61,12 +85,6 @@ export default function Recipes() {
     };
   };
 
-  const filteredMeals = meals.filter(meal =>
-    meal.strMeal.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    meal.strCategory.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    meal.strArea.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center">
@@ -87,8 +105,6 @@ export default function Recipes() {
       className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 py-8"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -115,8 +131,9 @@ export default function Recipes() {
             />
           </div>
         </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredMeals.map((meal, index) => {
+          {meals.map((meal, index) => {
             const nutrition = estimateNutrition(meal);
             return (
               <motion.div
@@ -196,6 +213,7 @@ export default function Recipes() {
             );
           })}
         </div>
+
         {selectedMeal && (
           <motion.div
             initial={{ opacity: 0 }}

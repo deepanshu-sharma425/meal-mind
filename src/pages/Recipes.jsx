@@ -88,7 +88,7 @@ export default function Recipes() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Header */}
+
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,7 +98,6 @@ export default function Recipes() {
           <p className="text-gray-600">Discover healthy recipes with detailed nutritional information</p>
         </motion.div>
 
-        {/* Search */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -116,8 +115,6 @@ export default function Recipes() {
             />
           </div>
         </motion.div>
-
-        {/* Recipe Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredMeals.map((meal, index) => {
             const nutrition = estimateNutrition(meal);
@@ -199,8 +196,6 @@ export default function Recipes() {
             );
           })}
         </div>
-
-        {/* Recipe Modal */}
         {selectedMeal && (
           <motion.div
             initial={{ opacity: 0 }}

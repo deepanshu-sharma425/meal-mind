@@ -13,8 +13,8 @@ export default function Signup() {
     confirmPassword: '',
     age: '',
     gender: '',
-    height: '', // in cm
-    weight: '', // in kg
+    height: '', 
+    weight: '',
     activityLevel: '',
     goal: '',
     dietaryRestrictions: []
@@ -30,7 +30,7 @@ export default function Signup() {
       ...formData,
       [name]: value,
     });
-    // Clear error when user starts typing
+
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -134,14 +134,13 @@ export default function Signup() {
         createdAt: new Date().toISOString()
       };
       
-      // In Next.js, you might want to use a different storage method
-      // or send this data to an API endpoint
+  
       if (typeof window !== 'undefined') {
         localStorage.setItem('userData', JSON.stringify(userData));
         localStorage.setItem('isLoggedIn', 'true');
       }
       
-      // Navigate to dashboard
+    
       navigate('/dashboard');
     }
   };
@@ -168,7 +167,7 @@ export default function Signup() {
           <h2 className="text-4xl font-bold text-gray-900 mb-2">Create Account</h2>
           <p className="text-gray-600">Start your nutrition journey today</p>
           
-          {/* Progress Indicator */}
+         
           <div className="flex items-center justify-center mt-6 mb-4">
             <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
               currentStep >= 1 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-600'
@@ -196,7 +195,7 @@ export default function Signup() {
           <form className="space-y-6" onSubmit={currentStep === 1 ? (e) => { e.preventDefault(); handleNext(); } : handleSubmit}>
             {currentStep === 1 ? (
               <>
-                {/* Step 1: Basic Account Info */}
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name
@@ -338,7 +337,6 @@ export default function Signup() {
               </>
             ) : (
               <>
-                {/* Step 2: Personal Information */}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="age" className="block text-sm font-medium text-gray-700 mb-2">
@@ -589,7 +587,7 @@ export default function Signup() {
               </div>
             )}
 
-            {/* Sign In Link */}
+  
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300" />

@@ -13,6 +13,7 @@ import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import Recipes from './pages/Recipes';
 import MealPlanner from './pages/MealPlanner';
+import ChatBot from './components/ChatBot';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           </Routes>
         </AnimatePresence>
         <Fotter />
+        <ChatBot />
       </div>
     </Router>
   );

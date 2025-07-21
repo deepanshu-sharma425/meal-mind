@@ -347,14 +347,14 @@ export default function Dashboard() {
             </div>
           </motion.div>
 
-          {/* Weekly Progress & Quick Actions */}
+ 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.7 }}
             className="space-y-8"
           >
-            {/* Weekly Progress */}
+       
             <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl border border-white/20 p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-6">Weekly Progress</h3>
               <div className="flex items-end justify-between h-40 mb-6">
@@ -378,7 +378,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Nutrition Summary */}
+   
             <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl border border-white/20 p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-6">Today's Nutrition</h3>
               <div className="space-y-4">
@@ -400,7 +400,6 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Quick Actions */}
             <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl border border-white/20 p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-6">Quick Actions</h3>
               <div className="space-y-4">
@@ -426,7 +425,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Meal Logging Modal */}
+
       {showMealForm && (
         <motion.div
           initial={{ opacity: 0 }}

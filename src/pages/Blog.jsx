@@ -83,7 +83,7 @@ export default function Blog() {
       exit={{ opacity: 0 }}
       className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50"
     >
-      {/* Hero Section */}
+  
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/90 to-teal-900/90"></div>
         <div 
@@ -115,7 +115,7 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Category Filter */}
+
       <section className="py-8 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -140,7 +140,7 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Featured Post */}
+
       {featuredPost && selectedCategory === 'All' && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -172,14 +172,7 @@ export default function Blog() {
                     <Clock className="h-4 w-4 mr-2" />
                     <span>{featuredPost.readTime}</span>
                   </div>
-                  {/* <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
-                  >
-                    Read Article
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </motion.button> */}
+                
                 </div>
                 <div className="relative">
                   <img
@@ -194,7 +187,7 @@ export default function Blog() {
         </section>
       )}
 
-      {/* Blog Posts Grid */}
+
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -284,7 +277,7 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
+
       <section className="py-16 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div

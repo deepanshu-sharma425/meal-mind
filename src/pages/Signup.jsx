@@ -565,7 +565,7 @@ export default function Signup() {
               </>
             )}
 
-            {/* Terms & Conditions */}
+
             {currentStep === 1 && (
               <div className="flex items-center">
                 <input

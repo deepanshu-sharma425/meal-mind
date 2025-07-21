@@ -24,7 +24,7 @@ export default function Services() {
       description: 'Advanced machine learning algorithms analyze your eating patterns and provide personalized recommendations.',
       features: ['Real-time nutritional analysis', 'Pattern recognition', 'Predictive modeling', 'Continuous learning'],
       image: 'https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=600',
-      link: '/services/ai-nutrition' // Sample internal route
+      link: '/services/ai-nutrition' 
     },
     {
       icon: Target,
@@ -126,7 +126,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Services Grid */}
+
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -171,7 +171,7 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  {/* Optional: Add Link to service detail page */}
+              
                   <div className="mt-4">
                     <Link to={service.link} className="text-emerald-600 hover:underline text-sm">
                       Learn More →
@@ -182,7 +182,7 @@ export default function Services() {
             ))}
           </div>
 
-          {/* Selected Service Details */}
+      
           <motion.div
             key={selectedService}
             initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+ 
       <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div

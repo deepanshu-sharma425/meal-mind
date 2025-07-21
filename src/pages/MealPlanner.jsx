@@ -146,7 +146,7 @@ export default function MealPlanner() {
               </div>
             </div>
 
-            {/* Goals */}
+ 
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                 <Target className="h-5 w-5 text-emerald-600 mr-2" />
@@ -170,7 +170,7 @@ export default function MealPlanner() {
             </div>
           </motion.div>
 
-          {/* Main Content */}
+        
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -178,7 +178,10 @@ export default function MealPlanner() {
             className="lg:col-span-3"
           >
             <div className="bg-white rounded-2xl shadow-lg p-6">
-              {/* Week Info */}
+
+
+              {/* Week Info b */}
+
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-gray-900">This Week's Plan</h2>
                 <div className="flex items-center space-x-4">
@@ -187,7 +190,7 @@ export default function MealPlanner() {
                 </div>
               </div>
 
-              {/* Day Tabs */}
+
               <div className="flex overflow-x-auto mb-6 border-b">
                 {daysOfWeek.map((day, index) => (
                   <button
@@ -204,7 +207,7 @@ export default function MealPlanner() {
                 ))}
               </div>
 
-              {/* Meals */}
+  
               <div className="space-y-4">
                 {mealTypes.map((mealType) => {
                   const meal = sampleMealPlan[daysOfWeek[selectedDay]]?.[mealType];
@@ -269,7 +272,7 @@ export default function MealPlanner() {
                 })}
               </div>
 
-              {/* Daily Summary */}
+      
               <div className="mt-6 p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl">
                 <h3 className="font-semibold text-gray-900 mb-3">Daily Summary</h3>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">

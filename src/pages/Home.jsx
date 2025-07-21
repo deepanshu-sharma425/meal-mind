@@ -56,7 +56,7 @@ export default function Home() {
       exit={{ opacity: 0 }}
       className="min-h-screen"
     >
-      {/* Search Bar */}
+
       <section className="bg-gradient-to-r from-slate-50 via-blue-50 to-indigo-50 py-6">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Hero Section */}
+
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-emerald-900 via-teal-800 to-emerald-900 overflow-hidden">
         <div className="absolute inset-0 bg-black/40"></div>
         <div 
@@ -86,7 +86,7 @@ export default function Home() {
           }}
         ></div>
         
-        {/* Animated background elements */}
+    
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             animate={{ 
@@ -115,7 +115,7 @@ export default function Home() {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+  
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -157,7 +157,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Contact Form */}
+       
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -193,7 +193,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Feature Carousel */}
+
       <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -243,10 +243,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Selling Points */}
+
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* First Selling Point */}
+       
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -289,7 +289,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Second Selling Point */}
+    
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -334,7 +334,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+  
       <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div

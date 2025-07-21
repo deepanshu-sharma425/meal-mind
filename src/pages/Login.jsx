@@ -118,7 +118,7 @@ export default function Login() {
               )}
             </div>
 
-            {/* Password */}
+   
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
                 Password
@@ -155,7 +155,7 @@ export default function Login() {
               )}
             </div>
 
-            {/* Remember & Forgot */}
+           
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <input
@@ -173,7 +173,7 @@ export default function Login() {
               </a>
             </div>
 
-            {/* Submit */}
+  
             <motion.button
               type="submit"
               whileHover={{ scale: 1.02 }}

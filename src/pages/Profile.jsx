@@ -10,14 +10,14 @@ export default function Profile() {
   const [editData, setEditData] = useState(null);
 
   useEffect(() => {
-    // Try to load user data from localStorage
+    
     const storedUserData = localStorage.getItem('userData');
     if (storedUserData) {
       const parsedData = JSON.parse(storedUserData);
       setUserData(parsedData);
       setEditData(parsedData);
     } else {
-      // fallback to mock data if nothing in localStorage
+ 
       const mockUserData = {
         name: "John Doe",
         email: "john.doe@example.com",
@@ -67,7 +67,7 @@ export default function Profile() {
       bmr = 447.593 + (9.247 * userData.weight) + (3.098 * userData.height) - (4.330 * userData.age);
     }
 
-    // Activity multipliers
+
     const activityMultipliers = {
       sedentary: 1.2,
       light: 1.375,
@@ -86,7 +86,7 @@ export default function Profile() {
   const handleSave = () => {
     if (editData) {
       setUserData(editData);
-      localStorage.setItem('userData', JSON.stringify(editData)); // persist changes
+      localStorage.setItem('userData', JSON.stringify(editData)); 
       setIsEditing(false);
     }
   };
@@ -149,7 +149,7 @@ export default function Profile() {
       className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-8"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -160,7 +160,7 @@ export default function Profile() {
           </h1>
           <p className="text-xl text-gray-600">Manage your personal information and health metrics</p>
           
-          {/* Navigation Links */}
+
           <div className="flex justify-center space-x-6 mt-6">
             <Link to="/dashboard" className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors">
               Dashboard
@@ -178,7 +178,7 @@ export default function Profile() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Profile Info */}
+
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -223,7 +223,7 @@ export default function Profile() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Name */}
+
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">Name</label>
                   {isEditing ? (
@@ -242,7 +242,7 @@ export default function Profile() {
                   )}
                 </div>
 
-                {/* Email */}
+    
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">Email</label>
                   <div className="flex items-center px-4 py-4 bg-gray-50 rounded-2xl">
@@ -250,7 +250,7 @@ export default function Profile() {
                   </div>
                 </div>
 
-                {/* Age */}
+          
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">Age</label>
                   {isEditing ? (
@@ -269,7 +269,7 @@ export default function Profile() {
                   )}
                 </div>
 
-                {/* Gender */}
+     
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">Gender</label>
                   {isEditing ? (
@@ -290,7 +290,7 @@ export default function Profile() {
                   )}
                 </div>
 
-                {/* Weight */}
+           
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">Weight (kg)</label>
                   {isEditing ? (
@@ -310,7 +310,7 @@ export default function Profile() {
                   )}
                 </div>
 
-                {/* Height */}
+         
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">Height (cm)</label>
                   {isEditing ? (
@@ -329,7 +329,7 @@ export default function Profile() {
                   )}
                 </div>
 
-                {/* Activity Level */}
+       
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">Activity Level</label>
                   {isEditing ? (
@@ -353,7 +353,7 @@ export default function Profile() {
                   )}
                 </div>
 
-                {/* Goal */}
+
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">Goal</label>
                   {isEditing ? (
@@ -384,7 +384,7 @@ export default function Profile() {
                 </div>
               </div>
 
-              {/* Dietary Restrictions */}
+
               <div className="mt-10">
                 <label className="block text-sm font-semibold text-gray-700 mb-4">Dietary Restrictions</label>
                 {isEditing ? (
@@ -421,14 +421,14 @@ export default function Profile() {
             </div>
           </motion.div>
 
-          {/* Health Metrics */}
+   
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
             className="space-y-8"
           >
-            {/* BMI Card */}
+    
             <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl border border-white/20 p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <Heart className="h-6 w-6 text-emerald-600 mr-3" />
@@ -458,7 +458,7 @@ export default function Profile() {
               </div>
             </div>
 
-            {/* Daily Calorie Needs */}
+      
             <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl border border-white/20 p-8">
               <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
                 <TrendingUp className="h-6 w-6 text-teal-600 mr-3" />
@@ -473,7 +473,7 @@ export default function Profile() {
               </div>
             </div>
 
-            {/* BMI Categories Reference */}
+   
             <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl border border-white/20 p-8">
               <h4 className="text-xl font-bold text-gray-900 mb-6">BMI Categories</h4>
               <div className="space-y-3 text-sm">
@@ -496,7 +496,7 @@ export default function Profile() {
               </div>
             </div>
 
-            {/* Health Tips */}
+           
             <div className={`bg-gradient-to-r ${bmiInfo.gradientFrom} ${bmiInfo.gradientTo} rounded-3xl shadow-xl p-8 text-white`}>
               <h4 className="text-xl font-bold mb-4">Personalized Health Tip</h4>
               <p className="text-sm leading-relaxed">

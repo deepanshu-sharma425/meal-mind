@@ -24,7 +24,7 @@ export default function ChatBot() {
     {
       question: "Can I track my nutrition with Nutri Flow?",
       answer:
-        "Yes! Nutri Flow provides detailed nutrition tracking for all your meals. You can view macros, micros, and daily totals in the 'Nutrition' dashboard.",
+        "Yes! Nutri Flow provides detailed nutrition tracking for all your meals. You can view fats,carbs,protein, and daily totals in the 'profile' dashboard.",
     },
     {
       question: "Does Nutri Flow have mobile apps?",

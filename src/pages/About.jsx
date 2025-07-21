@@ -78,7 +78,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Company History */}
+
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -122,11 +122,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+
       <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Mission */}
+     
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -145,7 +145,7 @@ export default function About() {
               </p>
             </motion.div>
 
-            {/* Vision */}
+    
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -166,7 +166,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
+
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -217,7 +217,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
+   
       <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
